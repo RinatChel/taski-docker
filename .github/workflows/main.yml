@@ -27,6 +27,7 @@ jobs:
       # Команд стало больше одной; ставим символ | и пишем команды построчно
       run: |
         python -m flake8 backend/
+        PYTHONPATH=$(pwd)
         cd backend/
         python manage.py test
 
